@@ -56,6 +56,10 @@ const CERTS = {
 const page = location.pathname;
 const key = /data-scientist/.test(page) ? "data" : /environmental/.test(page) ? "env" : "cloud";
 
+// tag every outbound link so providers can see the learner came from IndustryVerse
+const tag = u => /[?&]utm_/.test(u) ? u : u + (u.includes("?") ? "&" : "?") + "utm_source=industryverse&utm_medium=referral&utm_campaign=" + key;
+Object.values(CERTS).forEach(list => list.forEach(c => { c.url = tag(c.url); }));
+
 window.LESSON_CONTENT = window.LESSON_CONTENT || {};
 window.LESSON_CONTENT["4.1.1"] = { slides: [
   { type:"certhub", kicker:"4.1.1 · Certifications", title:"Turn your skills into proof",

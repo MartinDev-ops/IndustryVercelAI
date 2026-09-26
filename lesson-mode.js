@@ -650,7 +650,11 @@ R.certhub = (b, s, done, was) => {
       ${c.note?`<small class="note">${esc(c.note)}</small>`:""}
       <a class="go" href="${c.url}" target="_blank" rel="noopener">Start on ${esc(c.provider)} →</a></div>`).join("")}</div>
     ${s.footnote?`<div class="lm-certnote">${s.footnote}</div>`:""}`;
-  b.querySelectorAll(".lm-cert a.go").forEach(a => a.addEventListener("click", () => { a.closest(".lm-cert").classList.add("went"); done(); }));
+  b.querySelectorAll(".lm-cert a.go").forEach(a => a.addEventListener("click", () => {
+    const card = a.closest(".lm-cert"), c = s.certs[+card.dataset.k];
+    card.classList.add("went"); done();
+    try { window.IV && IV.logReferral({ career: (typeof PATH !== "undefined" && PATH.key) || "", provider: c.provider, certification: c.name, url: a.href }); } catch(e){}
+  }));
 };
 
 R.mc = (b, s, done, was) => {
