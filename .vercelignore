@@ -1,0 +1,3 @@
+*.command
+vercel-deploy-log.txt
+.DS_Store
