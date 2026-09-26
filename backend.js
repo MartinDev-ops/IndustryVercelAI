@@ -72,6 +72,11 @@ function renderModal(){
   b.querySelector("#ivGo").onclick = submit;
   b.querySelector("#ivGoogle").onclick = async () => {
     const msg = document.getElementById("ivMsg");
+    // check Google is switched on first, so learners never land on a raw error page
+    try {
+      const cfg = await fetch(SUPABASE_URL + "/auth/v1/settings", { headers: { apikey: SUPABASE_ANON_KEY } }).then(r => r.json());
+      if (!cfg?.external?.google) { msg.className = "msg err"; msg.textContent = "Google sign-in is coming soon. Please use email for now."; return; }
+    } catch(e) {}
     const { error } = await sb.auth.signInWithOAuth({ provider: "google", options: { redirectTo: location.origin + location.pathname } });
     if (error) { msg.className = "msg err"; msg.textContent = /not enabled|Unsupported provider/i.test(error.message) ? "Google sign-in isn't switched on yet. Use email for now." : error.message; }
   };
