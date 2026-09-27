@@ -1,5 +1,5 @@
 /* =====================================================================
-   FuturePath AI — full-page Lesson Mode (NetAcad-style course pages)
+   IndustryVerse — full-page Lesson Mode (NetAcad-style course pages)
    Uses globals from cloud-architect.html: PATH, MODS, LESSONS, S,
    lessonUnlocked, completeLesson, openTo, render, toast, ytReady, YT, popId
    ===================================================================== */
@@ -439,7 +439,7 @@ R.intro = (b, s) => { b.innerHTML = `<div class="lm-intro"><div>${s.text||""}</d
 
 R.video = (b, s, done) => {
   const L = cur.L, id = s.id || L.videoId;
-  b.innerHTML = `<div class="lm-video"><div><div class="lm-vbox"><div id="lmPlayer"></div><div class="lm-verr" id="lmVerr">This video can't play here.<br>Open the site with “Start FuturePath.command” or VS Code Live Server.</div></div>
+  b.innerHTML = `<div class="lm-video"><div><div class="lm-vbox"><div id="lmPlayer"></div><div class="lm-verr" id="lmVerr">This video can't play here.<br>Open the site from its web address rather than as a file.</div></div>
     <p class="lm-hint">▶ ${esc(L.videoTitle||"")}</p></div>
     <div class="lm-vnotes"><h5>Quick study notes</h5>${notesHTML(L)}</div></div>`;
   done();
@@ -625,7 +625,7 @@ R.terminal = (b, s, done, was) => {
     const hb = $("lmHb"); if (hb) hb.onclick = () => { $("lmHint").innerHTML = `Try typing: <code>${esc(s.tasks[t].hint)}</code>`; };
   };
   $("lmPs").innerHTML = ps();
-  print(`<span style="color:#8aa0b8">Welcome to the FuturePath practice server. Type <b style="color:#fff">help</b> for commands.</span>`);
+  print(`<span style="color:#8aa0b8">Welcome to the IndustryVerse practice server. Type <b style="color:#fff">help</b> for commands.</span>`);
   tasks(); if (was) done();
   inp.addEventListener("keydown", e => {
     if (e.key !== "Enter") return;

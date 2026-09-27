@@ -1,5 +1,5 @@
 /* =====================================================================
-   FuturePath AI — interactive lesson content (Phase 1 of Cloud Architect)
+   IndustryVerse — interactive lesson content (Phase 1 of Cloud Architect)
    Each lesson = a list of slides. Slide types:
      intro · video · flip · stack · hotspots · diagram · journey · cidr ·
      terminal · mc (multiple choice / true-false) · drag (match items)
@@ -239,13 +239,13 @@ window.LESSON_CONTENT = {
     art: ART.network,
     parts:{ laptop:{title:"Your laptop · 192.168.1.20", text:"Every device on a network gets an <b>IP address</b>, like a house number. Your laptop's address is private and only works inside your home network."},
             router:{title:"Router / default gateway · 192.168.1.1", text:"The <b>gateway</b> is the exit door of your network. Anything going to the internet leaves through it."},
-            dns:{title:"DNS server", text:"<b>DNS</b> is the internet's phone book. It turns a name like <code>futurepath.ai</code> into an IP address computers can use."},
+            dns:{title:"DNS server", text:"<b>DNS</b> is the internet's phone book. It turns a name like <code>industryverse.ai</code> into an IP address computers can use."},
             internet:{title:"The Internet", text:"A giant network of networks. Routers pass your data along, hop by hop, until it reaches the destination."},
             server:{title:"Web server · 203.0.113.10", text:"The computer that hosts the website. In the cloud, this is often a virtual machine in a data centre."} } },
   { type:"journey", kicker:"Animation", title:"What happens when you type a web address?", lead:"Press <b>Next step</b> to follow the data.",
     art: ART.network,
     steps:[
-      { from:"laptop", to:"router", title:"1 · Ask for directions", text:"You type <code>futurepath.ai</code>. Your laptop doesn't know its IP address yet, so it sends a DNS question out through the gateway." },
+      { from:"laptop", to:"router", title:"1 · Ask for directions", text:"You type <code>industryverse.ai</code>. Your laptop doesn't know its IP address yet, so it sends a DNS question out through the gateway." },
       { from:"router", to:"dns", title:"2 · Look it up", text:"The DNS server looks up the name and finds the IP address <b>203.0.113.10</b>." },
       { from:"dns", to:"laptop", title:"3 · Answer comes back", text:"The IP address travels back to your laptop. Now it knows where to go." },
       { from:"laptop", to:"internet", title:"4 · Send the request", text:"Your laptop sends the web request to the gateway, which forwards it onto the internet." },

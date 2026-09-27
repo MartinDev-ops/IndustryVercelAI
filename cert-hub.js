@@ -1,5 +1,5 @@
 /* =====================================================================
-   IndustryVerse / FuturePath AI — Certifications Hub
+   IndustryVerse — Certifications Hub
    Phase 4 "Build Your Portfolio" → one module: Certifications.
    Each card deep-links to the specific certification / enrolment page.
    ===================================================================== */

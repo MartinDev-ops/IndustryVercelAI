@@ -1,5 +1,5 @@
 /* =====================================================================
-   FuturePath AI — Environmental Scientist interactive lessons
+   IndustryVerse — Environmental Scientist interactive lessons
    New activity types: pollution tracer, carbon footprint calculator.
    Load AFTER lesson-mode.js. All illustrations are original SVG.
    ===================================================================== */

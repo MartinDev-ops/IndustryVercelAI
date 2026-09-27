@@ -1,5 +1,5 @@
 /* =====================================================================
-   FuturePath AI — Data Scientist interactive lessons
+   IndustryVerse — Data Scientist interactive lessons
    Adds data-science activity types to Lesson Mode and defines Phase 1
    (plus a regression lab in Phase 3). Original illustrations only.
    Load AFTER lesson-mode.js.

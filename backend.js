@@ -1,5 +1,5 @@
 /* =====================================================================
-   IndustryVerse AI — Supabase backend
+   IndustryVerse — Supabase backend
    - Accounts (Supabase Auth, email + password)
    - Cloud progress sync per career (table: progress, protected by RLS)
    - Referral tracking for certification clicks (table: referral_clicks)
